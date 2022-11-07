@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const limitServices = useLoaderData();
+    console.log(limitServices)
     return (
         <section>
         <div className="bg-pink-200">
@@ -15,6 +18,7 @@ const Home = () => {
         </div>
         <img src="https://img.freepik.com/free-photo/healthy-vegetables-kitchen_1303-12897.jpg?w=1380&t=st=1667845225~exp=1667845825~hmac=8b8877971bc7e25ff88b2748c4b1ec5d633eda101c71eae84f4cd4a0987a3416" alt="" className="w-4/5  mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 bg-gray-500" />
     </section>
+    
     );
 };
 

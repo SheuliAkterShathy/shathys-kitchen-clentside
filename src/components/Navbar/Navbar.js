@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -8,7 +9,7 @@ const Navbar = () => {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold text-white">LOGO</h2>
+                            <h2 className="text-2xl font-bold text-white">Shathy's Kitchen</h2>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -56,10 +57,10 @@ const Navbar = () => {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Home</a>
+                                <NavLink to='/'>Home</NavLink>
                             </li>
                             <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Blog</a>
+                                <NavLink to='/services'>Services</NavLink>
                             </li>
                             <li className="text-white hover:text-indigo-200">
                                 <a href="javascript:void(0)">About US</a>
