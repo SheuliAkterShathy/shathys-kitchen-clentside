@@ -13,7 +13,7 @@ const ServiceCard = ({service}) => {
       <img
           src={img}
           alt=""
-          className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
+          className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500 cursor-pointer"
         />
       </PhotoView>
     </PhotoProvider>

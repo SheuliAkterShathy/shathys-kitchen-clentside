@@ -25,9 +25,9 @@ const SignUp = () => {
             const user=result.user;
             console.log(user)
             form.reset('')
-            setError('');
             handleUpdateUserProfile(name,photoURL)
-             toast.success('Registration successful')
+            toast.success('Registration successful')
+            setError('');
             // navigate(from,{replace:true})
         })
         .catch(error=>{

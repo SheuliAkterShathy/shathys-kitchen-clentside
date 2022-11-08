@@ -1,6 +1,7 @@
 import React from "react";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from "react-router-dom";
 
 const LimitService = ({ limitService }) => {
   return (
@@ -10,7 +11,7 @@ const LimitService = ({ limitService }) => {
       <img
         src={limitService.img}
         alt=""
-        className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
+        className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500 cursor-pointer"
       />
       </PhotoView>
     </PhotoProvider>
@@ -27,12 +28,13 @@ const LimitService = ({ limitService }) => {
           <p className="text-xl text-pink-500">Price:{limitService.price}tk</p>
           <p className="">{limitService.details.slice(0, 100)}...</p>
         </div>
-        <button
-          type="button"
-          className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-pink-300 text-gray-900 hover:bg-pink-400"
-        >
-          View Details
-        </button>
+        <Link to={`/services/${limitService._id}`}>
+          <button
+            type="button"
+            className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-pink-300 text-gray-900 hover:bg-pink-400"
+          >
+            View Details
+          </button></Link>
       </div>
     </div>
   );
