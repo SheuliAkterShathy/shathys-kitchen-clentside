@@ -122,9 +122,9 @@ const Navbar = () => {
                         ? "bg-violet-800 px-2 py-1 rounded-md"
                         : undefined
                     }
-                    to="faq"
+                    to="/myreviews"
                   >
-                    MY Services
+                    My Reviews
                   </NavLink>
                 </li>
                 <li className="text-white hover:text-indigo-200">

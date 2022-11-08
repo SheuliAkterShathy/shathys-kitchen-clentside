@@ -3,6 +3,7 @@ import Blog from "../components/Blog";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
 import SignUp from "../components/Login/SignUp";
+import MyReviews from "../components/MyReviews";
 import Services from "../components/Services/Services";
 import ServicesDetails from "../components/ServicesDetails";
 import Main from "../layouts/Main";
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
                {
                 path:'/blog',
                 element:<Blog></Blog>
+               },
+               {
+                path:'/myreviews',
+                element:<MyReviews></MyReviews>
                },
                {
                 path:'/login',

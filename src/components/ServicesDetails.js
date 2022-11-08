@@ -15,6 +15,7 @@ const ServicesDetails = () => {
       .then((res) => res.json())
       .then((data) => setReviewService(data));
   }, [toggle]);
+  
   const handleReviewSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
