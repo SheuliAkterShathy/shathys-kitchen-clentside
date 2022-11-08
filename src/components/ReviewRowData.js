@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewRowData = ({reviewRowData}) => {
+const ReviewRowData = ({reviewRowData,handleDelete}) => {
     console.log(reviewRowData)
     const {_id,serviceImg,message,serviceName} = reviewRowData;
     return (
@@ -9,7 +9,7 @@ const ReviewRowData = ({reviewRowData}) => {
         <p >{serviceName}</p>
         <p>{message}</p>
          <button>Edit</button>
-         <button>Delete</button>
+         <button onClick={()=>handleDelete(_id)}>Delete</button>
      </div>
     
        
