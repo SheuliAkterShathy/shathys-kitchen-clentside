@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full bg-purple-500 shadow">
+        <nav className="w-full bg-pink-400 shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -71,34 +71,34 @@ const Navbar = () => {
                         </ul>
 
                         <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                    <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    <NavLink
+                        to="/login"
+                        className="inline-block w-full px-4 py-2 text-center text-white rounded-md shadow hover:bg-pink-400"
                     >
-                        Sign in
-                    </a>
-                    <a
+                        Log In
+                    </NavLink>
+                    {/* <a
                         href="javascript:void(0)"
                         className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
                     >
                         Sign up
-                    </a>
+                    </a> */}
                 </div>
                     </div>
                 </div>
                 <div className="hidden space-x-2 md:inline-block">
-                    <a
-                        href="javascript:void(0)"
-                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    <NavLink
+                        to="/login"
+                        className="px-4 py-2 text-white rounded-md shadow hover:bg-pink-400"
                     >
-                        Sign in
-                    </a>
-                    <a
+                        Log In
+                    </NavLink>
+                    {/* <a
                         href="javascript:void(0)"
                         className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
                     >
                         Sign up
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </nav>

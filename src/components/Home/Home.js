@@ -4,7 +4,7 @@ import LimitService from "../LimitService/LimitService";
 
 const Home = () => {
   const limitServices = useLoaderData();
-  console.log(limitServices);
+  
   return (
     <div>
       <section>
