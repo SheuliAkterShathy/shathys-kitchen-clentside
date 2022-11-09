@@ -1,14 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ReviewRowData = ({reviewRowData,handleDelete}) => {
     console.log(reviewRowData)
-    const {_id,serviceImg,message,serviceName} = reviewRowData;
+    const {_id,serviceImg,message,serviceName,customer} = reviewRowData;
     return (
      <div className='mb-8 w-3/4 mx-auto bg-pink-200 flex gap-16'>
-        <img className='w-12 ' src={serviceImg} alt="" />
+       <div>
+       <img className='w-12 ' src={serviceImg} alt="" />
         <p >{serviceName}</p>
+       </div>
+       <p>{customer}</p>
         <p>{message}</p>
-         <button>Edit</button>
+         <Link to={`/update/${_id}`}><button>Edit</button></Link>
          <button onClick={()=>handleDelete(_id)}>Delete</button>
      </div>
     

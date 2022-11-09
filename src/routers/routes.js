@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "../components/Blog";
+import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
 import SignUp from "../components/Login/SignUp";
 import MyReviews from "../components/MyReviews";
 import Services from "../components/Services/Services";
 import ServicesDetails from "../components/ServicesDetails";
+import Update from "../components/Update";
 import Main from "../layouts/Main";
 
 
@@ -13,6 +15,7 @@ const router = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
              {
                  path: '/',
@@ -36,6 +39,11 @@ const router = createBrowserRouter([
                {
                 path:'/myreviews',
                 element:<MyReviews></MyReviews>
+               },
+               {
+                path:'/update/:id',
+                element:<Update></Update>,
+                loader: ({params})=> fetch(`http://localhost:5000/review/${params.id}`)
                },
                {
                 path:'/login',
