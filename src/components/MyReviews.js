@@ -1,27 +1,36 @@
 import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../Context/UserContext";
+import useTitle from "../hooks/useTitle";
 import ReviewRowData from "./ReviewRowData";
 
 const MyReviews = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
   const [result, setResult] = useState(false)
+  useTitle('MyReviews')
 
   useEffect(() => {
     fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
          headers: {
-                 authorization: `Bearer  ${localStorage.getItem('token')}`
+                 authorization: `Bearer ${localStorage.getItem('token')}`
              }
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          logOut();
+          localStorage.removeItem('token');
+      }
+        return res.json()
+      })
       .then((data) => {
         setMyReviews(data);
         if(data.length){
             setResult(true);
         }
     });
-  }, [user?.email,result]);
+  }, [user?.email,result,logOut]);
+
 
   const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you want to cancel this order');
@@ -45,7 +54,7 @@ const MyReviews = () => {
 }
 
   return (
-    <div className="h-[80vh]">
+    <div className="">
       {
         result ? <>
 

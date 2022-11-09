@@ -2,15 +2,19 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
 
      const {createUser,updateUserProfile,signInWithGoogle} = useContext(AuthContext);
     
      const [error, setError] = useState('');
+     const [loading, setLoading] = useState(true);
      const navigate = useNavigate()
      const location = useLocation()
      const from = location.state?.from?.pathname || '/';
+     useTitle('SignUp')
+
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
@@ -22,6 +26,7 @@ const SignUp = () => {
 
         createUser(email,password)
         .then(result=>{
+            setLoading(false)
             const user=result.user;
             console.log(user)
             form.reset('')
@@ -51,6 +56,7 @@ const SignUp = () => {
     const handleGoogleSignIn = () =>{
         signInWithGoogle()
         .then(result=>{
+            setLoading(false)
             const user=result.user;
             console.log(user)
              navigate(from, { replace: true })
@@ -62,7 +68,10 @@ const SignUp = () => {
     }
 
     return (
-        <div className='flex-column lg:flex my-20'>
+      <div>
+         <p className='flex justify-center items-center'>{loading?loading:<div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-violet-400 "></div>}</p>
+
+          <div className='flex-column lg:flex my-20'>
         <div>
             <img className='w-3/4  mx-auto' src="https://img.freepik.com/premium-vector/enter-account-registration-verification-number_18660-2989.jpg?w=996"alt="" />
         </div>
@@ -113,6 +122,7 @@ const SignUp = () => {
 	</form>
 </div>
     </div>
+      </div>
     );
 };
 

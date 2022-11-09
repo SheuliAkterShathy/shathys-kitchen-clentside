@@ -20,8 +20,8 @@ const Navbar = () => {
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <div className="flex items-center text-white ">
                 <img
-                  className="w-10 mr-2 rounded-full bg-white"
-                  src="https://static.vecteezy.com/system/resources/thumbnails/009/457/163/small/3d-illustration-globe-book-and-abacus-for-education-png.png"
+                  className="w-10 mr-2 rounded-full"
+                  src="https://png.pngtree.com/png-vector/20220727/ourmid/pngtree-food-logo-png-image_6089719.png"
                   alt=""
                 />
 

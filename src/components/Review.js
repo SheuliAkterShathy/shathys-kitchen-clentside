@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Context/UserContext";
+import moment from 'moment';
+
 
 const Review = ({ review, handleReviewSubmit }) => {
   // const {user} = useContext(AuthContext)
@@ -14,6 +16,7 @@ const Review = ({ review, handleReviewSubmit }) => {
         <h3>Name:{customer}</h3>
       </div>
       <p>Review:{message}</p>
+      <p>Time:{moment().startOf('hour').fromNow()}</p>
     </div>
   );
 };

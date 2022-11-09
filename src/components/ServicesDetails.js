@@ -2,20 +2,24 @@ import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
+import useTitle from "../hooks/useTitle";
 import Review from "./Review";
+
+
 
 const ServicesDetails = () => {
   const { img, name, _id, price, ratings, details } = useLoaderData();
   const { user } = useContext(AuthContext);
   const [reviewService, setReviewService] = useState([]);
   const [toggle, setToggle] = useState(true);
+  useTitle('Service & review details')
 
   useEffect(() => {
     fetch(`http://localhost:5000/reviews/${_id}`)
       .then((res) => res.json())
       .then((data) => setReviewService(data));
   }, [toggle]);
-  
+
   const handleReviewSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
