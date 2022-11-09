@@ -134,7 +134,7 @@ const Navbar = () => {
                         ? "bg-violet-800 px-2 py-1 rounded-md"
                         : undefined
                     }
-                    to="faq"
+                    to="/addservices"
                   >
                     Add Services
                   </NavLink>
