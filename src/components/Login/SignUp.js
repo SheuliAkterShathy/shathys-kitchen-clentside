@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext';
 
 const SignUp = () => {
@@ -8,9 +8,9 @@ const SignUp = () => {
      const {createUser,updateUserProfile,signInWithGoogle} = useContext(AuthContext);
     
      const [error, setError] = useState('');
-    // const navigate = useNavigate()
-    // const location = useLocation()
-    // const from = location.state?.from?.pathname || '/';
+     const navigate = useNavigate()
+     const location = useLocation()
+     const from = location.state?.from?.pathname || '/';
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
@@ -28,7 +28,7 @@ const SignUp = () => {
             handleUpdateUserProfile(name,photoURL)
             toast.success('Registration successful')
             setError('');
-            // navigate(from,{replace:true})
+             navigate(from,{replace:true})
         })
         .catch(error=>{
             console.error(error);
@@ -53,7 +53,7 @@ const SignUp = () => {
         .then(result=>{
             const user=result.user;
             console.log(user)
-            // navigate(from, { replace: true })
+             navigate(from, { replace: true })
             
         })
         .catch(error=>{

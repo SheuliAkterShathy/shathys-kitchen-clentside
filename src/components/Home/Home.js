@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import LimitService from "../LimitService/LimitService";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
   
   return (
     <div>
-      <section>
+      <section className="">
         <div className="bg-pink-200">
           <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">
             <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-gray-900">
@@ -49,8 +49,13 @@ const Home = () => {
             >
             </LimitService>)
           }
-      </section>
 
+      </section>
+      <div className="text-center my-12">
+      <Link to='/services'> <button className="btn bg-pink-400 mx-auto w-1/2  my-6 p-4">See More</button></Link>
+      </div>
+
+{/* contact section */}
       <section>
       <section className="py-6 bg-pink-200 mx-4 mx-auto my-8">
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

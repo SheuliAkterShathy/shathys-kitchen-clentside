@@ -5,7 +5,7 @@ const ReviewRowData = ({reviewRowData,handleDelete}) => {
     console.log(reviewRowData)
     const {_id,serviceImg,message,serviceName,customer} = reviewRowData;
     return (
-     <div className='mb-8 w-3/4 mx-auto bg-pink-200 flex gap-16'>
+     <div className='mb-8 w-4/5 mx-auto bg-pink-200 lg:flex gap-16'>
        <div>
        <img className='w-12 ' src={serviceImg} alt="" />
         <p >{serviceName}</p>
