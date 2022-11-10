@@ -80,7 +80,7 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-violet-800 px-2 py-1 rounded-md"
+                        ? "bg-pink-500 px-2 py-1 rounded-md"
                         : undefined
                     }
                     to="/"
@@ -92,7 +92,7 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-violet-800 px-2 py-1 rounded-md"
+                        ? "bg-pink-500 px-2 py-1 rounded-md"
                         : undefined
                     }
                     to="/services"
@@ -104,7 +104,7 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-violet-800 px-2 py-1 rounded-md"
+                        ? "bg-pink-500 px-2 py-1 rounded-md"
                         : undefined
                     }
                     to="/blog"
@@ -119,7 +119,7 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-violet-800 px-2 py-1 rounded-md"
+                        ? "bg-pink-500 px-2 py-1 rounded-md"
                         : undefined
                     }
                     to="/myreviews"
@@ -131,7 +131,7 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "bg-violet-800 px-2 py-1 rounded-md"
+                        ? "bg-pink-500 px-2 py-1 rounded-md"
                         : undefined
                     }
                     to="/addservices"
@@ -149,63 +149,11 @@ const Navbar = () => {
 
               </ul>
 
-              {/* <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                {user?.uid ? (
-                  <>
-                    <div className="flex flex-col">
-                      <img
-                        title={user?.displayName}
-                        className="w-10 rounded-full mr-2 cursor-pointer "
-                        src={user?.photoURL}
-                        alt=""
-                      />
-                      <button
-                        className="text-white text-left mt-2 hover:bg-violet-800"
-                        onClick={handleSignOut}
-                      >
-                        Log Out
-                      </button>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <NavLink
-                      to="/login"
-                      className="inline-block w-full px-4 py-2 text-center text-white bg-violet-700 rounded-md shadow hover:bg-violet-800"
-                    >
-                      Log in
-                    </NavLink>
-                  </>
-                )}
-              </div> */}
+             
+
             </div>
           </div>
-          {/* <div className="hidden space-x-2 md:inline-block">
-            {user?.uid ? (
-              <>
-                <div className="flex items-center">
-                  <img
-                    title={user?.displayName}
-                    className="w-10 rounded-full mr-2 cursor-pointer"
-                    src={user?.photoURL}
-                    alt=""
-                  />
-                  <button className="text-white hover:bg-violet-800 p-1 rounded-md" onClick={handleSignOut}>
-                    Log Out
-                  </button>
-                </div>
-              </>
-            ) : (
-              <>
-                <NavLink
-                  to="/login"
-                  className="px-4 py-2 text-white bg-violet-700 rounded-md shadow hover:bg-violet-800"
-                >
-                  Log in
-                </NavLink>
-              </>
-            )}
-          </div> */}
+         
         </div>
       </nav>
     </div>

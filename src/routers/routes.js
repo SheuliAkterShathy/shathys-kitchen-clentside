@@ -22,17 +22,17 @@ const router = createBrowserRouter([
              {
                  path: '/',
                  element:<Home></Home>,
-                 loader:()=>fetch('http://localhost:5000/')
+                 loader:()=>fetch('https://shathys-kitchen-server-sheuliaktershathy.vercel.app/servicess')
                },
              {
                  path: '/services',
                  element:<Services></Services>,
-                //  loader:()=>fetch('http://localhost:5000/services')
+                //  loader:()=>fetch('https://shathys-kitchen-server-sheuliaktershathy.vercel.app/services')
                },
                {
                 path: '/services/:id',
                 element: <ServicesDetails></ServicesDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=> fetch(`https://shathys-kitchen-server-sheuliaktershathy.vercel.app/services/${params.id}`)
               },
                {
                 path:'/blog',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
                {
                 path:'/update/:id',
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/review/${params.id}`)
+                loader: ({params})=> fetch(`https://shathys-kitchen-server-sheuliaktershathy.vercel.app/review/${params.id}`)
                },
                {
                 path:'/addservices',

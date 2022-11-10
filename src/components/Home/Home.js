@@ -19,17 +19,17 @@ const Home = () => {
               finger-licking good!
             </p>
             <div className="flex flex-wrap justify-center">
-              <button
+              {/* <button
                 type="button"
                 className="px-8 py-3 m-2 text-lg font-semibold rounded bg-gray-800 text-gray-50"
               >
                 Get started
-              </button>
+              </button> */}
               <button
                 type="button"
                 className="px-8 py-3 m-2 text-lg border rounded border-gray-700 text-gray-900"
               >
-                Learn more
+                Bye Now
               </button>
             </div>
           </div>

@@ -1,6 +1,3 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../Context/UserContext";
-
 
 
 const Review = ({ review, handleReviewSubmit }) => {
@@ -16,7 +13,7 @@ const Review = ({ review, handleReviewSubmit }) => {
         <h3>Name:{customer}</h3>
       </div>
       <p>Review:{message}</p>
-      <p>Time:{time}</p>
+      <p>Time: {time} </p>
     </div>
   );
 };

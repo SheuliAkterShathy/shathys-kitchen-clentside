@@ -10,10 +10,11 @@ const Update = () => {
 
     const handleUpdateUser = event =>{
         event.preventDefault();
-        fetch(`http://localhost:5000/review/${storedUser._id}`, {
+        fetch(`https://shathys-kitchen-server-sheuliaktershathy.vercel.app/review/${storedUser._id}`, {
             method: 'PUT',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem("token")}`,
             },
             body: JSON.stringify(user)
         })

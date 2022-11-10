@@ -16,7 +16,7 @@ const AddServices = () => {
             name,price,img,details
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://shathys-kitchen-server-sheuliaktershathy.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

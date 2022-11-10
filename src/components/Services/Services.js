@@ -9,7 +9,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://shathys-kitchen-server-sheuliaktershathy.vercel.app/services")
       .then((res) => res.json())
       .then((data) => {
         setLoading(true);
