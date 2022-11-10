@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Context/UserContext";
-import moment from 'moment';
+
 
 
 const Review = ({ review, handleReviewSubmit }) => {
   // const {user} = useContext(AuthContext)
   console.log(review);
-  const { message, customer, photoURL } = review;
+  const { message, customer, photoURL,time } = review;
   return (
     <div className="bg-pink-300 m-5 p-4">
       <div className="flex items-center">
@@ -16,7 +16,7 @@ const Review = ({ review, handleReviewSubmit }) => {
         <h3>Name:{customer}</h3>
       </div>
       <p>Review:{message}</p>
-      <p>Time:{moment().startOf('hour').fromNow()}</p>
+      <p>Time:{time}</p>
     </div>
   );
 };

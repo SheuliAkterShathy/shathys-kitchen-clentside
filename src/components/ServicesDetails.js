@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
 import useTitle from "../hooks/useTitle";
 import Review from "./Review";
-
+import moment from 'moment';
 
 
 const ServicesDetails = () => {
@@ -27,11 +27,13 @@ const ServicesDetails = () => {
     const customer = user?.displayName;
     const email = user?.email;
     const photoURL = user?.photoURL;
+    const time = `${moment().format('Do MMM YY, h:mm')}`
 
     const review = {
       service: _id,
       serviceName: name,
       serviceImg: img,
+      time:time,
       customer,
       email,
       photoURL,
