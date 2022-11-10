@@ -103,7 +103,7 @@ const Login = () => {
       </p>
 
       <div className=" lg:flex my-20 w-[90%] m-auto">
-        <div className="1/2">
+        <div className="lg:w-1/2">
           <img
             className="w-3/4  mx-auto"
             src="https://img.freepik.com/premium-vector/enter-account-registration-verification-number_18660-2989.jpg?w=996"
@@ -162,7 +162,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   placeholder="leroy@jenkins.com"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -183,14 +183,14 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 text-gray-100 focus:border-violet-400"
                 />
               </div>
             </div>
             <p className="text-red-700">{error}</p>
             <button
               type="submit"
-              className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900"
+              className="w-full px-8 py-3 font-semibold rounded-md bg-pink-300 text-gray-900"
             >
               Log in
             </button>

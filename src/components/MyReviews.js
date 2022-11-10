@@ -73,7 +73,7 @@ const MyReviews = () => {
         </>
       ) : (
         <>
-          <p className=" w-full h-[80vh] text-5xl font-bold text-red-400 flex justify-center items-center">
+          <p className=" w-full text-center h-[80vh] text-4xl font-bold text-red-400 flex justify-center items-center">
             No reviews are found
           </p>
         </>

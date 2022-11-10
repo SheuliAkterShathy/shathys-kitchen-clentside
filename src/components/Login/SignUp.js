@@ -135,7 +135,7 @@ const SignUp = () => {
                   name="name"
                   id=""
                   placeholder="Your Name"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 text-gray-100 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -147,7 +147,7 @@ const SignUp = () => {
                   name="photoURL"
                   id=""
                   placeholder="photoURL"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -159,7 +159,7 @@ const SignUp = () => {
                   name="email"
                   id="email"
                   placeholder="leroy@jenkins.com"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -180,7 +180,7 @@ const SignUp = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
                 />
               </div>
             </div>
