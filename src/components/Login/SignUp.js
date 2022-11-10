@@ -135,7 +135,7 @@ const SignUp = () => {
                   name="name"
                   id=""
                   placeholder="Your Name"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -147,7 +147,7 @@ const SignUp = () => {
                   name="photoURL"
                   id=""
                   placeholder="photoURL"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -159,7 +159,7 @@ const SignUp = () => {
                   name="email"
                   id="email"
                   placeholder="leroy@jenkins.com"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -180,14 +180,14 @@ const SignUp = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
             </div>
             <p className="text-red-700">{error}</p>
             <button
               type="submit"
-              className="w-full px-8 py-3 font-semibold rounded-md bg-pink-300 text-gray-900"
+              className="w-full px-8 py-3 font-semibold rounded-md bg-pink-300 text-gray-900 hover:bg-pink-400"
             >
               Sign Up
             </button>

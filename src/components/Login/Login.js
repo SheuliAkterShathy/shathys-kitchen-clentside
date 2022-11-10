@@ -114,7 +114,7 @@ const Login = () => {
           <h2 className="mb-3 text-3xl font-semibold text-center">
             Login to your account
           </h2>
-          <p className="text-sm text-center">
+          <p className="text-center">
             Dont have account?
             <Link
               to="/signup"
@@ -142,7 +142,7 @@ const Login = () => {
             </button>
           </div>
           <div className="flex items-center w-full my-4">
-            <hr className="w-full text-black" />
+            <hr className="w-full bg-black" />
             <p className="px-3">OR</p>
             <hr className="w-full bg-black" />
           </div>
@@ -162,7 +162,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   placeholder="leroy@jenkins.com"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700  text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
               <div className="space-y-2">
@@ -183,14 +183,14 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 text-gray-100 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
                 />
               </div>
             </div>
             <p className="text-red-700">{error}</p>
             <button
               type="submit"
-              className="w-full px-8 py-3 font-semibold rounded-md bg-pink-300 text-gray-900"
+              className="w-full px-8 py-3 font-semibold rounded-md bg-pink-300 text-gray-900 hover:bg-pink-400"
             >
               Log in
             </button>

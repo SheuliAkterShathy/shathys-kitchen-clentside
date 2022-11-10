@@ -59,7 +59,7 @@ const Home = () => {
         <div className="grid lg:grid-cols-3 gap-10 ">
           <div className="bg-pink-200 p-4">
             <img className="w-20" src="https://img.freepik.com/premium-vector/king-food-logo-template-design-vector_20029-1410.jpg?size=626&ext=jpg&uid=R59678187&ga=GA1.2.258402809.1666072521&semt=sph" alt="" />
-            <h2 className="font-bold text-2xl">Quality Foods</h2>
+            <h2 className="font-bold text-2xl my-2">Quality Foods</h2>
             <p>
               Our main prayority to deliver quality foods.The term food quality
               represents the sum of all properties and attributes of a food item
@@ -68,12 +68,12 @@ const Home = () => {
           </div>
           <div className="bg-pink-200 p-4">
             <img className="w-20" src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg?w=1060&t=st=1667992031~exp=1667992631~hmac=32bf9a2e3dfa5ddbaf155b61fcceff37cdbbafe411e591c16ea286dfde174a69" alt="" />
-            <h2 className="font-bold text-2xl">Fastest Delivery</h2>
+            <h2 className="font-bold text-2xl my-2">Fastest Delivery</h2>
             <p>jI try to delivery food as much as earlier possible.Order your favourite  Food in Dhaka with Shathys kitchen✓ Super fast food delivery to your home or office ✓ Safe & easy payment options.</p>
           </div>
           <div className="bg-pink-200 p-4">
             <img className="w-20" src="https://img.freepik.com/free-vector/modern-various-kitchen-tools-flat-icon-set_74855-6572.jpg?w=1060&t=st=1667992300~exp=1667992900~hmac=4efc5130cd2ed799c79b0725333a0b0fbb3a4b4cfe273d9eca5263a2138d9091" alt="" />
-            <h2 className="font-bold text-2xl">Clean Kitchen</h2>
+            <h2 className="font-bold text-2xl my-2">Clean Kitchen</h2>
             <p>I want to provide
               Texture,Flavour, Nutritional content, Ethical and sustainable
               production foods.So clean kitchen is fundamental for this.</p>

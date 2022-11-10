@@ -7,7 +7,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
   
     if(loading){
-       return <div>Loading.....</div>
+       return  <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-pink-600 "></div>
     }
   
     if(!user){
