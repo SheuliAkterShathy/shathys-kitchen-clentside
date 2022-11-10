@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext";
 import useTitle from "../../hooks/useTitle";
-// import { Link } from 'react-router-dom';
+
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
@@ -33,13 +33,16 @@ const Login = () => {
         };
         // get jwt token
 
-        fetch("https://shathys-kitchen-server-sheuliaktershathy.vercel.app/jwt", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(currentUser),
-        })
+        fetch(
+          "https://shathys-kitchen-server-sheuliaktershathy.vercel.app/jwt",
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(currentUser),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("token", data.token);
@@ -65,22 +68,22 @@ const Login = () => {
           email: user.email,
         };
 
-        
         // get jwt token
 
-        fetch("https://shathys-kitchen-server-sheuliaktershathy.vercel.app/jwt", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(currentUser),
-        })
+        fetch(
+          "https://shathys-kitchen-server-sheuliaktershathy.vercel.app/jwt",
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(currentUser),
+          }
+        )
           .then((res) => res.json())
-
           .then((data) => {
             localStorage.setItem("token", data.token);
             toast.success("Your Login is Successful");
-
             navigate(from, { replace: true });
           });
       })
@@ -91,23 +94,23 @@ const Login = () => {
 
   return (
     <div>
-      <p className="flex justify-center items-center">
+      <p className="flex justify-center items-center mt-4">
         {loading ? (
           loading
         ) : (
-          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-violet-400 "></div>
+          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-pink-600 "></div>
         )}
       </p>
 
-      <div className="flex-column lg:flex my-20">
-        <div>
+      <div className=" lg:flex my-20 w-[90%] m-auto">
+        <div className="1/2">
           <img
             className="w-3/4  mx-auto"
             src="https://img.freepik.com/premium-vector/enter-account-registration-verification-number_18660-2989.jpg?w=996"
             alt=""
           />
         </div>
-        <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-pink-100">
+        <div className="lg:w-1/2 max-w-md p-4 rounded-md shadow sm:p-8 bg-pink-100">
           <h2 className="mb-3 text-3xl font-semibold text-center">
             Login to your account
           </h2>
@@ -139,7 +142,7 @@ const Login = () => {
             </button>
           </div>
           <div className="flex items-center w-full my-4">
-            <hr className="w-full bg-black" />
+            <hr className="w-full text-black" />
             <p className="px-3">OR</p>
             <hr className="w-full bg-black" />
           </div>

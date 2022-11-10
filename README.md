@@ -1,8 +1,10 @@
 ### My project Nmae is "Shathy's Kitchen"
 
-### Project Link:
+### Project Link: https://shathyskitchen.web.app/
 
-- Ihave used some components such as firebase,react-router-dom,react-hot-toast etc
+### Some features and functionality of Shathy's kitchen Website
+
+- I have used some components such as firebase,react-router-dom,react-hot-toast etc
 
 - At home page there are 4 sections,banner sections,shthy's kitchen informatin,and contact section, food services section
 

@@ -73,47 +73,58 @@ const ServicesDetails = () => {
           </div>
 
           <div className="p-4 lg:w-1/2">
-            <h2>Name: {name}</h2>
-            <p>Price: {price}</p>
-            <p>Ratings: {ratings}</p>
-            <p>Details: {details}</p>
+            <h2 className="text-2xl font-semibold mb-1">Name: {name}</h2>
+            <p className="text-xl font-semibold mb-1">Price: {price}tk</p>
+            <p className="text-xl mb-1">Ratings: {ratings} star</p>
+            <p className="">Details: {details}</p>
           </div>
         </div>
       </section>
 
       {/* Review Section */}
-              
-      <section className="w-4/5 mx-auto bg-pink-200 my-16 p-5 lg:flex">
-        
-        <div className="lg:w-2/5 m-5">
-          {user?.email ? (
-            <>
-              <form onSubmit={handleReviewSubmit}>
-                <input className="w-full p-6" type="text" name="message" placeholder="write your review" />
-                <button className="bg-pink-300 rounded-md mt-3 cursor-pointer hover:bg-pink-400 p-3" type="submit">Add Review</button>
-              </form>
-            </>
-          ) : (
-            <>
-              <p>
-                Add to review?{" "}
-                <Link to="/login">
-                  <span className="text-pink-600 underline">login first</span>
-                </Link>
-              </p>
-            </>
-          )}
-        </div>
+      <div>
+        <section className="w-4/5 mx-auto bg-pink-200 my-16 p-5 lg:flex">
+      
+          <div className="lg:w-2/5 m-5">
+            {user?.email ? (
+              <>
+                <form onSubmit={handleReviewSubmit}>
+                  <input
+                    className="w-full p-6 rounded-md"
+                    type="text"
+                    name="message"
+                    placeholder="write your review"
+                  />
+                  <button
+                    className="bg-pink-300 rounded-md mt-3 cursor-pointer hover:bg-pink-400 p-3"
+                    type="submit"
+                  >
+                    Add Review
+                  </button>
+                </form>
+              </>
+            ) : (
+              <>
+                <p className="text-xl font-bold">
+                  Want to add review?{" "}
+                  <Link to="/login">
+                    <span className="text-pink-600 underline">login first</span>
+                  </Link>
+                </p>
+              </>
+            )}
+          </div>
 
-        <div className="lg:w-3/5">
-          {reviewService.map((review) => (
-            <Review
-              review={review}
-              handleReviewSubmit={handleReviewSubmit}
-            ></Review>
-          ))}
-        </div>
-      </section>
+          <div className="lg:w-3/5">
+            {reviewService.map((review) => (
+              <Review
+                review={review}
+                handleReviewSubmit={handleReviewSubmit}
+              ></Review>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

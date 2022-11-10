@@ -6,7 +6,7 @@ const ErrorPage = () => {
     useTitle('ErrorPage')
     return (
         <div>
-            <section className='flex items-center h-screen p-16 bg-violet-300 text-gray-900'>
+            <section className='flex items-center h-screen p-16 bg-pink-200 text-gray-900'>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -42,7 +42,7 @@ const ErrorPage = () => {
           </p>
           <Link
             to='/'
-            className='px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900'
+            className='px-8 py-3 font-semibold rounded bg-pink-400 text-gray-900'
           >
             Back to homepage
           </Link>

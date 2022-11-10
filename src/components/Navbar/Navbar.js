@@ -79,9 +79,7 @@ const Navbar = () => {
                 <li className="text-white hover:text-indigo-200">
                   <NavLink
                     className={({ isActive }) =>
-                      isActive
-                        ? "bg-pink-500 px-2 py-1 rounded-md"
-                        : undefined
+                      isActive ? "bg-pink-500 px-2 py-1 rounded-md" : undefined
                     }
                     to="/"
                   >
@@ -91,9 +89,7 @@ const Navbar = () => {
                 <li className="text-white hover:text-indigo-200">
                   <NavLink
                     className={({ isActive }) =>
-                      isActive
-                        ? "bg-pink-500 px-2 py-1 rounded-md"
-                        : undefined
+                      isActive ? "bg-pink-500 px-2 py-1 rounded-md" : undefined
                     }
                     to="/services"
                   >
@@ -103,57 +99,64 @@ const Navbar = () => {
                 <li className="text-white hover:text-indigo-200">
                   <NavLink
                     className={({ isActive }) =>
-                      isActive
-                        ? "bg-pink-500 px-2 py-1 rounded-md"
-                        : undefined
+                      isActive ? "bg-pink-500 px-2 py-1 rounded-md" : undefined
                     }
                     to="/blog"
                   >
                     Blog
                   </NavLink>
                 </li>
-{
-    user?.uid?<>
+                {user?.uid ? (
+                  <>
+                    <li className="text-white hover:text-indigo-200">
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive
+                            ? "bg-pink-500 px-2 py-1 rounded-md"
+                            : undefined
+                        }
+                        to="/myreviews"
+                      >
+                        My Reviews
+                      </NavLink>
+                    </li>
+                    <li className="text-white hover:text-indigo-200">
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive
+                            ? "bg-pink-500 px-2 py-1 rounded-md"
+                            : undefined
+                        }
+                        to="/addservices"
+                      >
+                        Add Services
+                      </NavLink>
+                    </li>
 
-<li className="text-white hover:text-indigo-200">
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive
-                        ? "bg-pink-500 px-2 py-1 rounded-md"
-                        : undefined
-                    }
-                    to="/myreviews"
-                  >
-                    My Reviews
-                  </NavLink>
-                </li>
-                <li className="text-white hover:text-indigo-200">
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive
-                        ? "bg-pink-500 px-2 py-1 rounded-md"
-                        : undefined
-                    }
-                    to="/addservices"
-                  >
-                    Add Services
-                  </NavLink>
-                </li>
-                
-               <li><button onClick={handleSignOut} className="text-white">logout</button></li>
-
-    </>:<>
-    <><li><NavLink to='/login' className="text-white">log in</NavLink></li></>
-    </>
-}
-
+                    <li>
+                      <button onClick={handleSignOut} className="text-white">
+                        logout
+                      </button>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <>
+                      <li>
+                        <NavLink  className={({ isActive }) =>
+                          isActive
+                            ? "bg-pink-500 px-2 py-1 rounded-md text-white"
+                            : 'text-white'
+                        } to="/login">
+                          log in
+                        </NavLink>
+                      </li>
+                    </>
+                  </>
+                )}
               </ul>
-
-             
-
             </div>
           </div>
-         
         </div>
       </nav>
     </div>

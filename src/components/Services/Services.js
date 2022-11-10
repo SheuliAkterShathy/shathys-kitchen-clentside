@@ -18,11 +18,11 @@ const Services = () => {
   }, []);
   return (
     <div>
-      <p className="flex justify-center items-center">
+      <p className="flex justify-center items-center mt-4">
         {loading ? (
           loading
         ) : (
-          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-violet-400 "></div>
+          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-pink-600 "></div>
         )}
       </p>
 

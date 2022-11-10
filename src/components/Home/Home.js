@@ -14,20 +14,15 @@ const Home = () => {
             <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-gray-900">
               All are Welcome to <br /> Shathy's Kitchen
             </h1>
-            <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-gray-900">
+            <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-gray-900">Preparing healthy meals at home can support your immune system and reduce the risk of illnesses.
               I specialize in every-day, home-made food that are simple yet
               finger-licking good!
             </p>
             <div className="flex flex-wrap justify-center">
-              {/* <button
-                type="button"
-                className="px-8 py-3 m-2 text-lg font-semibold rounded bg-gray-800 text-gray-50"
-              >
-                Get started
-              </button> */}
+             
               <button
                 type="button"
-                className="px-8 py-3 m-2 text-lg border rounded border-gray-700 text-gray-900"
+                className="px-8 py-3 m-2 text-lg border-2 rounded border-pink-400 text-gray-900"
               >
                 Bye Now
               </button>
@@ -88,7 +83,7 @@ const Home = () => {
 
       {/* contact section */}
       <section>
-        <section className="py-6 bg-pink-200 mx-4 mx-auto my-8">
+        <section className="py-6 bg-pink-200 mx-4 my-16">
           <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
             <div className="py-6 md:py-0 md:px-6">
               <h1 className="text-4xl font-bold">Shathy's kitchen</h1>
@@ -145,7 +140,7 @@ const Home = () => {
                 <input
                   type="text"
                   placeholder="Leroy Jenkins"
-                  className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-800"
+                  className="block p-2 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400"
                 />
               </label>
               <label className="block">
@@ -153,19 +148,19 @@ const Home = () => {
                 <input
                   type="email"
                   placeholder="leroy@jenkins.com"
-                  className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-800"
+                  className="block w-full p-2 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400"
                 />
               </label>
               <label className="block">
                 <span className="mb-1">Message</span>
                 <textarea
                   rows="3"
-                  className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-800"
+                  className="block p-2 w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400"
                 ></textarea>
               </label>
               <button
                 type="button"
-                className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 text-gray-900 focus:ring-violet-400 hover:ring-violet-400"
+                className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-pink-300 text-gray-900 focus:ring-violet-400 hover:ring-violet-400"
               >
                 Submit
               </button>

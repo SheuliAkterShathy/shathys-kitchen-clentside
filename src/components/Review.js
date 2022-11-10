@@ -1,18 +1,15 @@
-
-
 const Review = ({ review, handleReviewSubmit }) => {
-  // const {user} = useContext(AuthContext)
   console.log(review);
-  const { message, customer, photoURL,time } = review;
+  const { message, customer, photoURL, time } = review;
   return (
-    <div className="bg-pink-300 m-5 p-4">
+    <div className="bg-pink-300 m-5 p-4 rounded-md">
       <div className="flex items-center">
         <div>
-          <img className="w-12 rounded-full" src={photoURL} alt="" />
+          <img className="w-12 rounded-full mr-1" src={photoURL} alt="" />
         </div>
-        <h3>Name:{customer}</h3>
+        <h3>Name: {customer}</h3>
       </div>
-      <p>Review:{message}</p>
+      <p>Review: {message}</p>
       <p>Time: {time} </p>
     </div>
   );

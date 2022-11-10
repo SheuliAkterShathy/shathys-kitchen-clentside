@@ -61,7 +61,7 @@ const MyReviews = () => {
   };
 
   return (
-    <div className="">
+    <div className=" mt-8">
       {result ? (
         <>
           {myReviews.map((reviewRowData) => (
