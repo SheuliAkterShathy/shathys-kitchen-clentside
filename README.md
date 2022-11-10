@@ -21,3 +21,5 @@
 - There are also private routes, login register,error page
 
 - There are a navbar and a footer in this projects
+
+### Disclaimer: To see My reviews must  have to login
