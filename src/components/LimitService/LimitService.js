@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const LimitService = ({ limitService }) => {
   return (
-    <div className="w-96 rounded-md shadow-md bg-pink-100 mx-auto">
+    <div className="w-96 rounded-md shadow-md bg-pink-00 mx-auto">
        <PhotoProvider>
       <PhotoView src={limitService.img}>
       <img

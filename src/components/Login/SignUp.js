@@ -22,13 +22,13 @@ const SignUp = () => {
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photoURL, email, password);
+   
 
     createUser(email, password)
       .then((result) => {
         setLoading(false);
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        
         form.reset("");
         handleUpdateUserProfile(name, photoURL);
         toast.success("Registration successful");
@@ -56,8 +56,8 @@ const SignUp = () => {
     signInWithGoogle()
       .then((result) => {
         setLoading(false);
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+     
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -102,7 +102,7 @@ const SignUp = () => {
               onClick={handleGoogleSignIn}
               aria-label="Login with Google"
               type="button"
-              className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-violet-400"
+              className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-pink-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ const SignUp = () => {
                   name="name"
                   id=""
                   placeholder="Your Name"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-pink-400"
                 />
               </div>
               <div className="space-y-2">
@@ -147,7 +147,7 @@ const SignUp = () => {
                   name="photoURL"
                   id=""
                   placeholder="photoURL"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-pink-400"
                 />
               </div>
               <div className="space-y-2">
@@ -159,7 +159,7 @@ const SignUp = () => {
                   name="email"
                   id="email"
                   placeholder="leroy@jenkins.com"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-pink-400"
                 />
               </div>
               <div className="space-y-2">
@@ -180,7 +180,7 @@ const SignUp = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-violet-400"
+                  className="w-full px-3 py-2 border rounded-md border-gray-700 focus:border-pink-400"
                 />
               </div>
             </div>

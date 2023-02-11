@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ReviewRowData = ({ reviewRowData, handleDelete }) => {
-  console.log(reviewRowData);
+  
   const { _id, serviceImg, message, serviceName, customer } = reviewRowData;
   return (
     <div className="mb-8 w-4/5 mx-auto bg-pink-100 p-8">

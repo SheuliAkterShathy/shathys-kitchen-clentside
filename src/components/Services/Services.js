@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+
 import useTitle from "../../hooks/useTitle";
 import ServiceCard from "./ServiceCard";
 
@@ -26,7 +26,7 @@ const Services = () => {
         )}
       </p>
 
-      <div className="grid gap-6 grid-cols-1 lg:grid-cols-3 my-12">
+      <div className="grid gap-12 grid-cols-1 lg:grid-cols-3 my-16">
         {services.map((service) => (
           <ServiceCard service={service} key={service._id}></ServiceCard>
         ))}

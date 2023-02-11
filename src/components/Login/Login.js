@@ -21,7 +21,7 @@ const Login = () => {
 
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    
 
     signIn(email, password)
       .then((result) => {
@@ -88,7 +88,7 @@ const Login = () => {
           });
       })
       .catch((error) => {
-        console.error(error);
+        toast.error(error);
       });
   };
 
@@ -102,10 +102,13 @@ const Login = () => {
         )}
       </p>
 
-      <div className=" lg:flex my-20 w-[90%] m-auto">
+
+      <div className="text-center font-bold text-xl">User: tisha@gmail.com <br/>Pass: 123456</div>
+      <div className=" lg:flex my-20 w-[100%] justify-around m-auto">
+       
         <div className="lg:w-1/2">
           <img
-            className="w-3/4  mx-auto"
+            className="  mx-auto"
             src="https://img.freepik.com/premium-vector/enter-account-registration-verification-number_18660-2989.jpg?w=996"
             alt=""
           />

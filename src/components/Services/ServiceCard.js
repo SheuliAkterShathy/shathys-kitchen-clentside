@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({ service }) => {
   const { name, price, img, details, _id } = service;
   return (
-    <div className="w-96 rounded-md shadow-md bg-pink-100 mx-auto">
+    <div className="w-96 rounded-md shadow-md mx-auto">
       <PhotoProvider>
         <PhotoView src={img}>
           <img
             src={img}
             alt=""
-            className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500 cursor-pointer"
+            className="object-cover object-center w-full rounded-t-md h-72 p-5 bg-gray-00 cursor-pointer"
           />
         </PhotoView>
       </PhotoProvider>
